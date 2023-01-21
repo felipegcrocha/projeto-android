@@ -2,7 +2,7 @@
 
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@1,700;1,800&display=swap');
 
 @font-face {
     font-family: 'Android';
@@ -19,10 +19,10 @@
     --cor3: #2fa866;
     --cor4: #1a5c37;
     --cor5: #063d1e;
+    --cor6: #070707;
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-destaque: 'Bebas Neue', cursive;
-    --fonte-android: 'Android', cursive;
+    --fonte-destaque: 'Sofia Sans', sans-serif;
 }
 
 /* configurações globais */
@@ -45,12 +45,12 @@ body {
 
 /* configurações do cabeçalho */
 
-header {
-    /* background-color: var(--cor4); */
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-    min-height: 150px;
+/* header {
+    background-color: var(--cor6); 
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); 
+    min-height: 60px;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 header > h1 {
@@ -59,7 +59,8 @@ header > h1 {
     font-size: 3em;
     font-weight: normal;
     margin-bottom: 20px;
-    /* text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.493); apenas para exercício */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.493); apenas para exercício 
 }
 
 header > p {
@@ -71,12 +72,68 @@ header > p {
     padding-left: 10px;
     margin: auto;
     margin-bottom: 30px;
-    /* text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.493); apenas para exercício */
-}
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.493); apenas para exercício 
+} */
 
-/* configurações do menu de navegação */
+/* configuração do novo menu de navegação */
 
 nav {
+    align-items: center;
+    background-color: var(--cor6);
+    font-family: var(--fonte-destaque);
+    justify-content: space-between;
+    min-height: 50px;
+}
+
+nav > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 10px 0px 10px 20px;
+}
+
+nav > button {
+    background-color: transparent;
+    border: none;
+    color: var(--cor0);
+    font-size: 2em;
+    position: absolute;
+    right: 10px;
+    display: none;
+}
+
+nav > button:hover {
+    color: var(--cor3);
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+.lista {
+    list-style: none;
+}
+
+nav, .lista {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    color: var(--cor1);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar:hover {
+    color: var(--cor3);
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+/* configurações do menu de navegação - antigo */
+
+/* nav {
     background-color: var(--cor5);
     font-family: var(--fonte-padrao);
     padding: 10px;
@@ -95,7 +152,7 @@ nav > a:hover {
     background-color: var(--cor1);
     color: var(--cor5);
     transition-duration: 0.25s;
-}
+} */
 
 /* configurações da main/principal */
 
@@ -113,13 +170,13 @@ main {
 
 main h1 {
     color: var(--cor5);
-    font-family: var(--fonte-android);
-    font-weight: normal;
+    font-family: var(--fonte-destaque);
+    font-weight: 800;
 }
 
 main h2 {
     color: #2fa865ad;
-    font-family: var(--fonte-android);
+    font-family: var(--fonte-destaque);
     font-weight: normal;
     /* background-image: linear-gradient(to right, var(--cor1), transparent); */
     text-indent: 5px;
